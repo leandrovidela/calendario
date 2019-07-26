@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="Calendar">
+    <div class="Calendar__months">
+      <button id="back" class="Calendar__buttons">
+        <img src="assets/img/flecha-izquierda.svg" alt="arrow">
+      </button>
+      <h2 class="Calendar__month-name" id="current-month"></h2>
+      <button id="next" class="Calendar__buttons ">
+        <img src="assets/img/flecha-derecha.svg" alt="arrow">
+      </button>
+    </div>
+    <div class="Calendar__grid Grid">
+      <div class="Grid__item">D</div>
+      <div class="Grid__item">L</div>
+      <div class="Grid__item">M</div>
+      <div class="Grid__item">M</div>
+      <div class="Grid__item">J</div>
+      <div class="Grid__item">V</div>
+      <div class="Grid__item">S</div>
+    </div>
+    <div class="Calendar__grid Grid grid-days">
+
+    </div>
+  </div>
+
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

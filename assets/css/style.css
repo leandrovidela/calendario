@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #6200ee;
+  --white: #ffffff;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+}
+
+.Calendar {
+  padding: 8px;
+  margin: 15px;
+  flex-basis: 385px;
+  box-shadow: 0 0 25px #cccccc;
+  transform: translate3d(0, 50px, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+}
+
+.Calendar.show {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+}
+
+.Calendar__months {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.Calendar__month-name {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+.Calendar__buttons {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  padding: 15px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+.Calendar__buttons:focus {
+  outline: none;
+}
+
+.Calendar__buttons img {
+  width: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.feriado {
+  background: var(--primary-color);
+  border-radius: 50%;
+  color: var(--white);
+}
+
+.today {
+  color: #ff4747;
+  font-weight: 700;
+  border-bottom: 1px solid;
+}
+
+.Calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 15px;
+  align-items: center;
+  justify-items: center;
+}
+
+.Grid__item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
+.col-start-4 {
+  grid-column-start: 4;
+}
+
+.col-start-5 {
+  grid-column-start: 5;
+}
+
+.col-start-6 {
+  grid-column-start: 6;
+}
+
+.col-start-7 {
+  grid-column-start: 7;
+}
+
+@media (max-width: 568px) {
+  .Calendar__grid {
+    grid-gap: 5px;
+  }
+
+  .Grid__item {
+    width: 35px;
+    height: 35px;
+  }
+}
